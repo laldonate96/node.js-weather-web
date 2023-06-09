@@ -46,7 +46,7 @@ app.get('/help', (req, res) => {
 
 
 app.get('/weather', (req, res) => { // request and response
-    const adress = req.query.adress
+    const adress = req.query.adress // gets the adress from the query URL
 
     if (!adress) { 
         return res.send({ // I USE RETURN TO STOP THE EXECUTION, SO THE CODE BELOW THAT PRINTS ON CONSOLE THE SEARCH DOES NOT EXECUTE AND BREAKS THE PROGRAM
