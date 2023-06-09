@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast')
 // console.log(path.join(__dirname, '../public')) // CREATES A PATH TO ANOTHER FOLDER
 
 const app = express() // IT IS THE ONLY FUNCTION THE NPM MODULE HAS
+const port = process.env.PORT || 3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -102,6 +103,6 @@ app.get('*', (req, res) => { // * STANDS FOR ANYTHING THAT HASNT BEEN REFERENCED
     })
 })
 
-app.listen(3000, () => { // STARTS UP THE WEB SERVER
-    console.log('Server is up on port 3000.')
+app.listen(port, () => { // STARTS UP THE WEB SERVER ON PORT
+    console.log('Server is up on port ' + port)
 })
