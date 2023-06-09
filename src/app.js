@@ -106,3 +106,5 @@ app.get('*', (req, res) => { // * STANDS FOR ANYTHING THAT HASNT BEEN REFERENCED
 app.listen(port, () => { // STARTS UP THE WEB SERVER ON PORT
     console.log('Server is up on port ' + port)
 })
+
+module.exports = app
