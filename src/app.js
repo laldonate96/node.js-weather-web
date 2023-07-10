@@ -73,6 +73,28 @@ app.get('/weather', (req, res) => { // request and response
     })
 })
 
+app.get('/positionweather', (req, res) => {
+
+    if (!req.query.coords) {
+      return res.send({
+        error: 'No Address found'
+      })
+    }
+
+    const coords = req.query.coords.split(',')
+    const latitude = coords[0]
+    const longitude = coords[1]
+   
+    forecast(latitude, longitude, (error, forecastData) => {
+      if (error) {
+        return res.send(error)
+      }
+      
+      res.send({
+        forecast: forecastData
+      })
+    })
+  })
 
 app.get('/products', (req, res) => {
     if (!req.query.search) {
