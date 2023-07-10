@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 // console.log(path.join(__dirname, '../public')) // CREATES A PATH TO ANOTHER FOLDER
 
 const app = express() // IT IS THE ONLY FUNCTION THE NPM MODULE HAS
-const port = 4000
+const port = process.env.PORT || 4000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -89,7 +89,7 @@ app.get('/positionweather', (req, res) => {
       if (error) {
         return res.send(error)
       }
-      
+
       res.send({
         forecast: forecastData
       })
