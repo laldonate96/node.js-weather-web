@@ -16,6 +16,12 @@ body {
     flex-grow: 1; /* IT USES ALL SPACE THAT IS UNUSED */
 }
 
+.my-location {
+    margin-left: 260px;
+    position: relative;
+    top: -35px;
+}
+
 footer {
     color: #888888;
     /*margin: 16px;  SPACE BETWEEN OBJECT AND OTHER OBJECTS */
@@ -76,4 +82,8 @@ button {
 
 button:hover {
     background-color: rgb(7, 92, 107)
+}
+
+p {
+    margin-top: -10px;
 }
