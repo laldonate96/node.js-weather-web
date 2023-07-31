@@ -60,7 +60,7 @@ input {
     border: 2px solid rgb(7, 92, 107);
     padding: 8px;
     background: #333333;
-    margin-right: 5px;
+    margin-right: -3px;
 }
 
 ::placeholder {
@@ -81,7 +81,7 @@ button:hover {
 }
 
 p {
-    margin-top: -10px;
+    margin-top: 20px;
 }
 
 .test {
